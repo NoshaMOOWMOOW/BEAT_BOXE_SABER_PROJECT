@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - AvoidableObj
+  - DestroyableObj2
+  - DestroyableObj3
+  - DestroyableObj1
+  - OpposableObj
+  - DestroyableObj4
   layers:
   - Default
   - TransparentFX

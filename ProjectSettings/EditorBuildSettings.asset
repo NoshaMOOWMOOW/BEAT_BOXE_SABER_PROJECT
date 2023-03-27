@@ -5,9 +5,21 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/Scenes/OUR_SCENES/MAINandLEVELS/Level0_Menu.unity
+    guid: 123822fe733054944a43fabef510351c
+  - enabled: 1
+    path: Assets/Scenes/OUR_SCENES/MAINandLEVELS/Level1_NEO.unity
+    guid: 8d357ca4a0a4c9a418d595a4eb4cef44
+  - enabled: 1
+    path: Assets/Scenes/OUR_SCENES/MAINandLEVELS/Level2_FIREBOREAL.unity
+    guid: 6efc930b53a330a479ed27b608d25f9c
+  - enabled: 1
+    path: Assets/Scenes/OUR_SCENES/MAINandLEVELS/Level3_RINGYSNOWY.unity
+    guid: c053d6d58ea34fc4dab6ebbeb95b49d7
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 5bd54342d9298b34eaca3726a9b7513f,
       type: 2}
