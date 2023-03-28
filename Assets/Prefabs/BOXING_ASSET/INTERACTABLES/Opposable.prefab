@@ -149,7 +149,7 @@ GameObject:
   - component: {fileID: 64643526448773248}
   - component: {fileID: 2114250341620929332}
   m_Layer: 0
-  m_Name: OpposableObj_PropositionBuste 1
+  m_Name: Opposable
   m_TagString: OpposableObj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
