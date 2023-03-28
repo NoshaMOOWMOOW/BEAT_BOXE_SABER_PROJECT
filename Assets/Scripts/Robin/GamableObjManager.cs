@@ -6,11 +6,10 @@ public class GamableObjManager : MonoBehaviour
 {
     // List of object types to instantiate
     [SerializeField] private List<GameObject> _objectTypes;
-    private GameObject _objectType;
     private GameObject _objToSpawn;
 
-    // Prefabs Objects
-    [SerializeField] private List<GameObject> _prefabs;
+    // Prefabs Pool Objects
+    private List<GameObject> _prefabsPool;
 
     // Array of spawn points
     [SerializeField] private Transform[] _spawnPoints = new Transform[3];
@@ -30,6 +29,7 @@ public class GamableObjManager : MonoBehaviour
 
     private void Start()
     {
+        _prefabsPool = new List<GameObject>();
         InitializePool();
     }
 
@@ -44,26 +44,27 @@ public class GamableObjManager : MonoBehaviour
         // Move spawned object
         if (_objToSpawn != null && _canMove)
         {
-            MoveObjectTowardsPlayer(_objectType);
+            MoveObjectTowardsPlayer(_objToSpawn);
         }
         else
         {
             _canMove = false;
-            print("Spawned Object is not initialized");
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider objSpawned)
     {
+        _objToSpawn = objSpawned.gameObject;
+
         // Deactivate spawned object 
-        if (other.CompareTag("DestroyableObj1") ||
-            other.CompareTag("DestroyableObj2") ||
-            other.CompareTag("DestroyableObj3") ||
-            other.CompareTag("DestroyableObj4") ||
-            other.CompareTag("AvoidableObj") ||
-            other.CompareTag("OpposableObj"))
+        if (objSpawned.CompareTag("DestroyableObj1") ||
+            objSpawned.CompareTag("DestroyableObj2") ||
+            objSpawned.CompareTag("DestroyableObj3") ||
+            objSpawned.CompareTag("DestroyableObj4") ||
+            objSpawned.CompareTag("AvoidableObj") ||
+            objSpawned.CompareTag("OpposableObj"))
         {
-            other.gameObject.SetActive(false);
+            objSpawned.gameObject.SetActive(false);
         }
     }
 
@@ -71,26 +72,29 @@ public class GamableObjManager : MonoBehaviour
     {
         for (int i = 0; i < _objectTypes.Count; i++)
         {
-            _objectTypes[i].SetActive(false);
-            // _objectTypes.Add(_objectTypes[i]);
+            GameObject obj = Instantiate(_objectTypes[i]);
+            obj.SetActive(false);
+            _prefabsPool.Add(obj);
         }
     }
 
     private GameObject GetOjectFromPool(Vector3 location)
     {
-        for (int i = 0; i < _objectTypes.Count; i++)
+        Shuffle(_prefabsPool);
+
+        for (int i = 0; i < _prefabsPool.Count; i++)
         {
-            if (!_objectTypes[i].activeInHierarchy)
+            if (!_prefabsPool[i].activeInHierarchy)
             {
-                _objectTypes[i].transform.position = location;
-                _objectTypes[i].SetActive(true);
-                return _objectTypes[i];
+                _prefabsPool[i].transform.position = location;
+                _prefabsPool[i].SetActive(true);
+                return _prefabsPool[i];
             }
         }
 
         int randomIndex = Random.Range(0, 6);
-        GameObject obj = Instantiate(_prefabs[randomIndex], location, Quaternion.identity);
-        _objectTypes.Add(_prefabs[randomIndex]);
+        GameObject obj = Instantiate(_objectTypes[randomIndex], location, Quaternion.identity);
+        _prefabsPool.Add(obj);
         return obj;
     }
 
@@ -102,19 +106,30 @@ public class GamableObjManager : MonoBehaviour
 
         // Get a random type of object
         int randomObjectIndex = Random.Range(0, _objectTypes.Count);
-        _objectType = GetOjectFromPool(_spawnPoint.transform.position);
 
-        // Instantier l'objet à la position générée
-        // _objToSpawn = Instantiate(_objectType, _spawnPoint.position, Quaternion.identity);
+        _objToSpawn = GetOjectFromPool(_spawnPoint.transform.position);
 
         _canMove = true;
 
-        // Mettre à jour le temps de dernière instantiation
+        // Update the time of the last instantiation
         _lastSpawnTime = Time.time;
     }
 
-    private void MoveObjectTowardsPlayer(GameObject gameObject)
+    private void MoveObjectTowardsPlayer(GameObject objSpawned)
     {
-        gameObject.transform.position += -gameObject.transform.forward * _movementSpeed * Time.deltaTime;
+        objSpawned.transform.position += -objSpawned.transform.forward * _movementSpeed * Time.deltaTime;
+    }
+
+    // Shuffle the list of inactive objects every time GetObjectFromPool() is called
+    private void Shuffle<T>(List<T> list)
+    {
+        int listNum = list.Count;
+        for (int i = 0; i < listNum - 1; i++)
+        {
+            int random = Random.Range(i, listNum);
+            T value = list[random];
+            list[random] = list[i];
+            list[i] = value;
+        }
     }
 }
