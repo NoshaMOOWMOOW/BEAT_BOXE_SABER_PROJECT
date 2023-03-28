@@ -7,3 +7,6 @@ Journal de bord d'un boulet du versionning
 
 
 Besoin d'un miracle. Test de Push vers ma nouvelle après m'être bien assuré que je travaille sur ma branche. Je viens de réverifier et s'est bon
+
+
+2 nouveau commit. Regarder si un simple commit me l'ajoute à ma branche distante après le push
