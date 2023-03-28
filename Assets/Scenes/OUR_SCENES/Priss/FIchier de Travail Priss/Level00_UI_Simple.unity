@@ -7144,6 +7144,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbc311c0d2f16034e949be3b0763d306, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+ Priscilla
+  loadScene: 
+
 --- !u!65 &3045566629033528405
 BoxCollider:
   m_ObjectHideFlags: 0
