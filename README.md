@@ -11,4 +11,4 @@ Besoin d'un miracle. Test de Push vers ma nouvelle scene après m'être bien ass
 
 2 nouveau commit. Regarder si un simple commit me l'ajoute à ma branche distante après le push
 
-3 DOnc quand je push sur Orognin, ça semble push sur ma branche distante
+3 Donc quand je push sur Origine, ça semble push sur ma branche distante
