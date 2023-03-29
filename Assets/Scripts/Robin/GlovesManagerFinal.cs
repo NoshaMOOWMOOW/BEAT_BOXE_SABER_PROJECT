@@ -4,10 +4,6 @@ using UnityEngine;
 
 public class GlovesManagerFinal : MonoBehaviour
 {
-  [SerializeField] private GameObject _BagFront;
-  [SerializeField] private GameObject _BagLeft;
-  [SerializeField] private GameObject _BagRight;
-  [SerializeField] private GameObject _BagDown;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,28 +19,31 @@ public class GlovesManagerFinal : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
       Debug.Log(gameObject.name + " a touché le " + collision.gameObject.name);
-      Destroy(collision.transform.parent.gameObject);
 
-      if(collision.gameObject.name == "CenterSide" && collision.gameObject.CompareTag("Center"))
+      if(collision.gameObject.name == "CenterSide" && collision.gameObject.CompareTag("DestroyableObj3"))
       {
         Debug.Log("Multiplicateur Augmente");
+        collision.transform.parent.gameObject.SetActive(false);
       }
 
       
-      if(collision.gameObject.name == "LeftSide" && collision.gameObject.CompareTag("Left"))
+      if(collision.gameObject.name == "LeftSide" && collision.gameObject.CompareTag("DestroyableObj1"))
       {
         Debug.Log("Multiplicateur Augmente");
+        collision.transform.parent.gameObject.SetActive(false);
       }
 
-      if(collision.gameObject.name == "RightSide" && collision.gameObject.CompareTag("Right"))
+      if(collision.gameObject.name == "RightSide" && collision.gameObject.CompareTag("DestroyableObj2"))
       {
         Debug.Log("Multiplicateur Augmente");
+        collision.transform.parent.gameObject.SetActive(false);
 
       }
 
-      if(collision.gameObject.name == "DownSide" && collision.gameObject.CompareTag("Down"))
+      if(collision.gameObject.name == "DownSide" && collision.gameObject.CompareTag("DestroyableObj4"))
       {
         Debug.Log("Multiplicateur Augmente");
+        collision.transform.parent.gameObject.SetActive(false);
       }
 
 
