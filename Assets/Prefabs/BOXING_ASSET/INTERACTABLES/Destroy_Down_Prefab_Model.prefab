@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 3248654130571703134}
   m_Layer: 0
   m_Name: LeftSide
-  m_TagString: Down
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5362626236467243964
 Transform:
   m_ObjectHideFlags: 0
@@ -41,7 +41,7 @@ BoxCollider:
   m_GameObject: {fileID: 1733698062747550189}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 0.086103745, y: 2.6738768, z: 0.8316517}
   m_Center: {x: -0.46657518, y: -0.024049405, z: 0.021644922}
@@ -57,11 +57,11 @@ GameObject:
   - component: {fileID: 5024543198661377530}
   m_Layer: 0
   m_Name: RightSide
-  m_TagString: Down
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5632488000019855455
 Transform:
   m_ObjectHideFlags: 0
@@ -86,7 +86,7 @@ BoxCollider:
   m_GameObject: {fileID: 3058144362265371565}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 0.07959775, y: 2.6791172, z: 0.8300167}
   m_Center: {x: 0.4809386, y: -0.026948694, z: 0.0020730796}
@@ -102,11 +102,11 @@ GameObject:
   - component: {fileID: 487545956403204818}
   m_Layer: 0
   m_Name: DownSide
-  m_TagString: Down
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7980027509665009719
 Transform:
   m_ObjectHideFlags: 0
@@ -131,7 +131,7 @@ BoxCollider:
   m_GameObject: {fileID: 3398897146939301024}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1.0118874, y: 0.07874156, z: 0.856259}
   m_Center: {x: 0.029718105, y: -1.4056665, z: 0.038700003}
@@ -428,8 +428,8 @@ GameObject:
   - component: {fileID: 7528777244941003914}
   - component: {fileID: 5240642738967359349}
   m_Layer: 0
-  m_Name: Destroy_Down
-  m_TagString: DestroyableObj4
+  m_Name: Destroy_Down_Prefab_Model
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -482,7 +482,7 @@ BoxCollider:
   m_GameObject: {fileID: 6360498170101453030}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1.0428323, y: 2.9840004, z: 0.92207205}
   m_Center: {x: -0.009178339, y: -0.022543289, z: 0.009397321}
@@ -498,11 +498,11 @@ GameObject:
   - component: {fileID: 18536284979048275}
   m_Layer: 0
   m_Name: CenterSide
-  m_TagString: Down
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4172381308979966465
 Transform:
   m_ObjectHideFlags: 0
@@ -527,7 +527,7 @@ BoxCollider:
   m_GameObject: {fileID: 8361277922453732416}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 0.92983454, y: 2.7113924, z: 0.08162055}
   m_Center: {x: 0.018383713, y: -0.0019879343, z: -0.3947941}

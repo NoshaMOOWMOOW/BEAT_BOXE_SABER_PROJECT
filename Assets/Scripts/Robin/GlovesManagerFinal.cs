@@ -25,7 +25,7 @@ public class GlovesManagerFinal : MonoBehaviour
       Debug.Log(gameObject.name + " a touché le " + collision.gameObject.name);
       Destroy(collision.transform.parent.gameObject);
 
-      if(collision.gameObject.name == "FrontSide" && collision.gameObject.CompareTag("Front"))
+      if(collision.gameObject.name == "CenterSide" && collision.gameObject.CompareTag("Center"))
       {
         Debug.Log("Multiplicateur Augmente");
       }

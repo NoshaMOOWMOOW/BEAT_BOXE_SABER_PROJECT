@@ -64,7 +64,9 @@ public class GamableObjManager : MonoBehaviour
             objSpawned.CompareTag("AvoidableObj") ||
             objSpawned.CompareTag("OpposableObj"))
         {
+            Debug.Log(objSpawned + "a atteint la limite");
             objSpawned.gameObject.SetActive(false);
+            // objSpawned.transform.parent.gameObject.SetActive(false);
         }
     }
 
@@ -88,6 +90,7 @@ public class GamableObjManager : MonoBehaviour
             {
                 _prefabsPool[i].transform.position = location;
                 _prefabsPool[i].SetActive(true);
+                // _prefabsPool[i].transform.parent.gameObject.SetActive(true);
                 return _prefabsPool[i];
             }
         }
