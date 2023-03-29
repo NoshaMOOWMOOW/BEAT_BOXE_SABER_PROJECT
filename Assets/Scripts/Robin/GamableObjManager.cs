@@ -66,7 +66,6 @@ public class GamableObjManager : MonoBehaviour
         {
             Debug.Log(objSpawned + "a atteint la limite");
             objSpawned.gameObject.SetActive(false);
-            // objSpawned.transform.parent.gameObject.SetActive(false);
         }
     }
 
@@ -90,7 +89,6 @@ public class GamableObjManager : MonoBehaviour
             {
                 _prefabsPool[i].transform.position = location;
                 _prefabsPool[i].SetActive(true);
-                // _prefabsPool[i].transform.parent.gameObject.SetActive(true);
                 return _prefabsPool[i];
             }
         }
@@ -120,7 +118,20 @@ public class GamableObjManager : MonoBehaviour
 
     private void MoveObjectTowardsPlayer(GameObject objSpawned)
     {
-        objSpawned.transform.position += -objSpawned.transform.forward * _movementSpeed * Time.deltaTime;
+        if (objSpawned.CompareTag("AvoidableObj") || objSpawned.CompareTag("OpposableObj"))
+        {
+            print("Avoidable Object et Opposable Object vont être tournés");
+
+            objSpawned.transform.position += objSpawned.transform.forward * _movementSpeed * Time.deltaTime;
+        }
+
+        if (objSpawned.CompareTag("DestroyableObj1") ||
+            objSpawned.CompareTag("DestroyableObj2") ||
+            objSpawned.CompareTag("DestroyableObj3") || 
+            objSpawned.CompareTag("DestroyableObj4"))
+        {
+            objSpawned.transform.position += -objSpawned.transform.forward * _movementSpeed * Time.deltaTime;
+        }
     }
 
     // Shuffle the list of inactive objects every time GetObjectFromPool() is called
