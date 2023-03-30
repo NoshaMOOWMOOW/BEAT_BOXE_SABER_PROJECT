@@ -120,12 +120,15 @@ public class GamableObjManager : MonoBehaviour
 
     private void MoveObjectTowardsPlayer(GameObject objSpawned)
     {
+        if (objSpawned.CompareTag("AvoidableObj") || objSpawned.CompareTag("OpposableObj"))
+        {
+            objSpawned.transform.position += -objSpawned.transform.forward * _movementSpeed * Time.deltaTime;
+        }
+
         if (objSpawned.CompareTag("DestroyableObj1") ||
             objSpawned.CompareTag("DestroyableObj2") ||
             objSpawned.CompareTag("DestroyableObj3") ||
-            objSpawned.CompareTag("DestroyableObj4") ||
-            objSpawned.CompareTag("AvoidableObj") ||
-            objSpawned.CompareTag("OpposableObj"))
+            objSpawned.CompareTag("DestroyableObj4"))
         {
             objSpawned.transform.position += -objSpawned.transform.forward * _movementSpeed * Time.deltaTime;
         }
