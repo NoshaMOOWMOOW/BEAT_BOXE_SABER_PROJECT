@@ -26,24 +26,18 @@ public class ScoreManager : MonoBehaviour
             (other.gameObject.CompareTag("Gloves") && gameObject.CompareTag("DestroyableObj3")) ||
             (other.gameObject.CompareTag("Gloves") && gameObject.CompareTag("DestroyableObj4")))
         {
-            print("Destroyable object hit ! + 100");
-            // ScoreDestroyable();
             Score(_pointDestroyables);
             gameObject.SetActive(false);
         }
 
         if (other.gameObject.CompareTag("Gloves") && gameObject.CompareTag("AvoidableObj"))
         {
-            print("Avoidable object hit ! + 50");
-            // ScoreAvoidable();
             Score(_pointAvoidable);
             gameObject.SetActive(false);
         }
 
         if (other.gameObject.CompareTag("Gloves") && gameObject.CompareTag("OpposableObj"))
         {
-            print("Opposable object hit ! + 100");
-            // ScoreOpposable();
             Score(_pointOpposable);
             gameObject.SetActive(false);
         }
@@ -55,8 +49,6 @@ public class ScoreManager : MonoBehaviour
             (other.gameObject.CompareTag("LimitZone") && gameObject.CompareTag("DestroyableObj2")) ||
             (other.gameObject.CompareTag("LimitZone") && gameObject.CompareTag("DestroyableObj1")))
         {
-            print("The player missed the object! - 50");
-            // ScoreMissed();
             Score(_pointMissed);
             gameObject.SetActive(false);
         }
