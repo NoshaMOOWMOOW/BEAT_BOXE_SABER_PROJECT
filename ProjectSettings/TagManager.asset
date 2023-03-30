@@ -10,6 +10,7 @@ TagManager:
   - DestroyableObj1
   - OpposableObj
   - DestroyableObj4
+  - LimitZone
   layers:
   - Default
   - TransparentFX
