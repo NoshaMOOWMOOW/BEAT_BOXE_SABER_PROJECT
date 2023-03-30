@@ -6090,18 +6090,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _objectTypes:
+  - {fileID: 6111797092105896643, guid: 81b5d84196f1bbf409b940c1ca37cc43, type: 3}
+  - {fileID: 2309687120747898093, guid: 2015cd4802658cd4e978a612419be807, type: 3}
   - {fileID: 2728625212289466295, guid: dc80c604761fb0c48b1a82a8163702d0, type: 3}
-  - {fileID: 2728625212289466295, guid: dc80c604761fb0c48b1a82a8163702d0, type: 3}
-  - {fileID: 2728625212289466295, guid: dc80c604761fb0c48b1a82a8163702d0, type: 3}
-  - {fileID: 2728625212289466295, guid: dc80c604761fb0c48b1a82a8163702d0, type: 3}
-  - {fileID: 2728625212289466295, guid: dc80c604761fb0c48b1a82a8163702d0, type: 3}
-  - {fileID: 2728625212289466295, guid: dc80c604761fb0c48b1a82a8163702d0, type: 3}
+  - {fileID: 3672502759718499098, guid: a52c3f94daaf9414c93e775667fa62d8, type: 3}
+  - {fileID: 2031499386348994363, guid: 740999e7b12903642a2326f0ab67da75, type: 3}
+  - {fileID: 6171956145642545953, guid: 2596ebb13ec7a714aafbccd1af0740af, type: 3}
   _spawnPoints:
   - {fileID: 608657941}
   - {fileID: 396346091}
   - {fileID: 1154850793}
   _spawnRate: 1.5
-  _movementSpeed: 8
+  _movementSpeed: 4
 --- !u!65 &1631749538
 BoxCollider:
   m_ObjectHideFlags: 0

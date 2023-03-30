@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3151917440810651546}
   - component: {fileID: 5274944068945647234}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Opposable_Final
   m_TagString: OpposableObj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
