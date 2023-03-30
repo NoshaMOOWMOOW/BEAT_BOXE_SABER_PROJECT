@@ -52,6 +52,8 @@ public class GamableObjManager : MonoBehaviour
         }
     }
 
+    
+
     private void OnTriggerEnter(Collider objSpawned)
     {
         _objToSpawn = objSpawned.gameObject;
@@ -60,11 +62,24 @@ public class GamableObjManager : MonoBehaviour
         if (objSpawned.CompareTag("DestroyableObj1") ||
             objSpawned.CompareTag("DestroyableObj2") ||
             objSpawned.CompareTag("DestroyableObj3") ||
-            objSpawned.CompareTag("DestroyableObj4") ||
-            objSpawned.CompareTag("AvoidableObj") ||
+            objSpawned.CompareTag("DestroyableObj4"))
+        {
+            Debug.Log(objSpawned + " a atteint la limite à la position " + objSpawned.transform.position);
+            objSpawned.gameObject.SetActive(false);
+            if (objSpawned.transform.parent.gameObject != null)
+            {
+                objSpawned.transform.parent.gameObject.SetActive(false);
+            }
+            else
+            {
+                Debug.Log(objSpawned.transform.parent.gameObject + " is null");
+            }
+        }
+
+        if (objSpawned.CompareTag("AvoidableObj") ||
             objSpawned.CompareTag("OpposableObj"))
         {
-            Debug.Log(objSpawned + "a atteint la limite");
+            Debug.Log(objSpawned + " a atteint la limite à la position " + objSpawned.transform.position);
             objSpawned.gameObject.SetActive(false);
         }
     }
@@ -118,17 +133,13 @@ public class GamableObjManager : MonoBehaviour
 
     private void MoveObjectTowardsPlayer(GameObject objSpawned)
     {
-        if (objSpawned.CompareTag("AvoidableObj") || objSpawned.CompareTag("OpposableObj"))
-        {
-            print("Avoidable Object et Opposable Object vont être tournés");
-
-            objSpawned.transform.position += objSpawned.transform.forward * _movementSpeed * Time.deltaTime;
-        }
 
         if (objSpawned.CompareTag("DestroyableObj1") ||
             objSpawned.CompareTag("DestroyableObj2") ||
             objSpawned.CompareTag("DestroyableObj3") || 
-            objSpawned.CompareTag("DestroyableObj4"))
+            objSpawned.CompareTag("DestroyableObj4") ||
+            objSpawned.CompareTag("AvoidableObj") ||
+            objSpawned.CompareTag("OpposableObj"))
         {
             objSpawned.transform.position += -objSpawned.transform.forward * _movementSpeed * Time.deltaTime;
         }
