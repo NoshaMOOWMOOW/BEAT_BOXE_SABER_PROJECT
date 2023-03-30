@@ -11,6 +11,9 @@ TagManager:
   - OpposableObj
   - DestroyableObj4
   - LimitZone
+  - SpawnPointCenter
+  - SpawnPointLeft
+  - SpawnPointRight
   layers:
   - Default
   - TransparentFX
