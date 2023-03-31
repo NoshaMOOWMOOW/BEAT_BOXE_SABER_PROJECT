@@ -239,6 +239,7 @@ GameObject:
   - component: {fileID: 3118312413825957463}
   - component: {fileID: -1540781961076887712}
   - component: {fileID: 1747656742284793579}
+  - component: {fileID: 8120678670701063352}
   m_Layer: 0
   m_Name: Destroyable_LEFT
   m_TagString: DestroyableObj1
@@ -298,6 +299,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &8120678670701063352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2309687120747898093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93e498d1649eb074d9f5c80541c76b0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scoreText: {fileID: 8317910573470618650, guid: 5febbd7b819526a40a967a6789cdd693,
+    type: 3}
+  _pointDestroyables: 100
+  _pointAvoidable: 50
+  _pointOpposable: 50
+  _pointMissed: -50
 --- !u!1 &4703628022679345176
 GameObject:
   m_ObjectHideFlags: 0
