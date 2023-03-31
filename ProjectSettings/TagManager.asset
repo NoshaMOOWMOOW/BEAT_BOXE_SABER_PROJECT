@@ -10,19 +10,27 @@ TagManager:
   - DestroyableObj1
   - OpposableObj
   - DestroyableObj4
+<<<<<<< HEAD
   - LimitZone
   - SpawnPointCenter
   - SpawnPointLeft
   - SpawnPointRight
+=======
+  - Center
+  - Right
+  - Left
+  - Down
+  - Front
+>>>>>>> ff1ac5e3ae824f67732f5397ed6020a1068d53da
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Grabbable
   - Water
   - UI
   - PostProcess
-  - 
+  - Player
   - 
   - 
   - 
