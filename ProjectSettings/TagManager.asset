@@ -10,15 +10,20 @@ TagManager:
   - DestroyableObj1
   - OpposableObj
   - DestroyableObj4
+  - Center
+  - Right
+  - Left
+  - Down
+  - Front
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Grabbable
   - Water
   - UI
   - PostProcess
-  - 
+  - Player
   - 
   - 
   - 
