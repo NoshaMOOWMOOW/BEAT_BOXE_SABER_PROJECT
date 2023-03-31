@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GlovesManagerFinal : MonoBehaviour
 {
+  [SerializeField] private AudioSource _audio_effects;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,7 @@ public class GlovesManagerFinal : MonoBehaviour
       Debug.Log(gameObject.name + " triggers " + other.gameObject.name);
       //other.transform.parent.gameObject.SetActive(false);
       other.gameObject.SetActive(false);
+    _audio_effects.Play();
 
       if(other.gameObject.name == ("CenterSide") && other.gameObject.CompareTag("DestroyableObj3") ||
         other.gameObject.name == ("LeftSide") && other.gameObject.CompareTag("DestroyableObj1") ||
