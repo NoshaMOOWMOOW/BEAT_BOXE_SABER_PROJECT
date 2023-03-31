@@ -158,26 +158,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3006544930203587399}
     m_Modifications:
-    - target: {fileID: 5599481664794473281, guid: 5db6ed39c5b2e5f48a361c225acf5fdd,
-        type: 3}
-      propertyPath: m_InteractionManager
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5599481664794473281, guid: 5db6ed39c5b2e5f48a361c225acf5fdd,
-        type: 3}
-      propertyPath: m_Activated.m_PersistentCalls.m_Calls.Array.data[4].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5599481666111674244, guid: 5db6ed39c5b2e5f48a361c225acf5fdd,
-        type: 3}
-      propertyPath: m_InteractionManager
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5599481666111674244, guid: 5db6ed39c5b2e5f48a361c225acf5fdd,
-        type: 3}
-      propertyPath: m_Activated.m_PersistentCalls.m_Calls.Array.data[8].m_Target
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 5820841215941386605, guid: 5db6ed39c5b2e5f48a361c225acf5fdd,
         type: 3}
       propertyPath: m_Name
@@ -237,31 +217,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6631165549373376882, guid: 5db6ed39c5b2e5f48a361c225acf5fdd,
-        type: 3}
-      propertyPath: m_InteractionManager
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6631165549373376882, guid: 5db6ed39c5b2e5f48a361c225acf5fdd,
-        type: 3}
-      propertyPath: m_Activated.m_PersistentCalls.m_Calls.Array.data[6].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6631165550237931790, guid: 5db6ed39c5b2e5f48a361c225acf5fdd,
-        type: 3}
-      propertyPath: m_InteractionManager
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6631165550237931790, guid: 5db6ed39c5b2e5f48a361c225acf5fdd,
-        type: 3}
-      propertyPath: m_Activated.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6631165551011884757, guid: 5db6ed39c5b2e5f48a361c225acf5fdd,
-        type: 3}
-      propertyPath: m_InteractionManager
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5db6ed39c5b2e5f48a361c225acf5fdd, type: 3}
